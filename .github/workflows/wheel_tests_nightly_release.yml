@@ -238,7 +238,7 @@ jobs:
       jaxlib-version: "head"
       skip-download-jaxlib-and-plugins-from-gcs: ${{inputs.skip-download-jaxlib-and-plugins-from-gcs}}
       gcs_download_uri: ${{inputs.gcs_download_uri}}
-      s3_download_uri: 's3://jax-ci-amd/rocm-wheels/${{ github.repository }}/${{ github.ref_name }}/${{ matrix.rocm.release-version }}/wheel-tests-nightly/${{ github.run_number }}/${{ github.run_attempt }}'
+      s3_download_uri: 's3://jax-ci-amd/rocm-wheels/ROCm/jax/amd/${{ matrix.rocm.release-version }}/wheel-tests-nightly/380/1'
 
   run-bazel-test-rocm:
     if: ${{ !cancelled() && (github.repository_owner == 'jax-ml' || github.repository_owner == 'ROCm') }}
